@@ -58,8 +58,8 @@ const Payment = () => {
                     }`}
                   >
                     <div className="flex flex-col gap-[3px] justify-center items-center">
-                      <img src="/images/payment/stripe.png" alt="stripe" />
-                      <span className="text-slate-600">Stripe</span>
+                      <img src="/images/payment/card.jfif" alt="stripe" />
+                      <span className="text-slate-600">Card</span>
                     </div>
                   </div>
 
@@ -91,7 +91,7 @@ const Payment = () => {
                       onClick={handleEsewaPayment}
                       className="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600"
                     >
-                      Pay with eSewa
+                      Start Payment
                     </button>
                   </div>
                 )}

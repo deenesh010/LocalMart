@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { GrMail } from "react-icons/gr";
-import { IoIosCall } from "react-icons/io";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import {
   FaLinkedinIn,
@@ -137,9 +136,8 @@ const Headers = () => {
                   <li>
                     <Link
                       to={"/"}
-                      className={`p-2 block ${
-                        pathname === "/" ? "text-[#7fad39]" : "text-slate-600"
-                      }`}
+                      className={`p-2 block ${pathname === "/" ? "text-[#7fad39]" : "text-slate-600"
+                        }`}
                     >
                       Home
                     </Link>
@@ -147,45 +145,43 @@ const Headers = () => {
                   <li>
                     <Link
                       to="/shops"
-                      className={`p-2 block ${
-                        pathname === "/shops"
+                      className={`p-2 block ${pathname === "/shops"
                           ? "text-[#7fad39]"
                           : "text-slate-600"
-                      }`}
+                        }`}
                     >
                       Shop
                     </Link>
                   </li>
                   <li>
                     <Link
-                    to="/chatbot"
-                      className={`p-2 block ${
-                        pathname === "/chatbot"
+                      to="/chatbot"
+                      className={`p-2 block ${pathname === "/chatbot"
                           ? "text-[#7fad39]"
                           : "text-slate-600"
-                      }`}
+                        }`}
                     >
                       Chat Bot
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className={`p-2 block ${
-                        pathname === "/about"
+                    to="/about"
+                      className={`p-2 block ${pathname === "/about"
                           ? "text-[#7fad39]"
                           : "text-slate-600"
-                      }`}
+                        }`}
                     >
                       About
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className={`p-2 block ${
-                        pathname === "/contact"
+                      to="/contact"
+                      className={`p-2 block ${pathname === "/contact"
                           ? "text-[#7fad39]"
                           : "text-slate-600"
-                      }`}
+                        }`}
                     >
                       Contact
                     </Link>
@@ -231,14 +227,12 @@ const Headers = () => {
       <div className="hidden md-lg:block">
         <div
           onClick={() => setShowShidebar(true)}
-          className={`fixed duration-200 transition-all ${
-            showShidebar ? "invisible" : "visible"
-          } hidden md-lg:block w-screen h-screen bg-[rgba(0,0,0,0.5)] top-0 left-0 z-20`}
+          className={`fixed duration-200 transition-all ${showShidebar ? "invisible" : "visible"
+            } hidden md-lg:block w-screen h-screen bg-[rgba(0,0,0,0.5)] top-0 left-0 z-20`}
         ></div>
         <div
-          className={`w-[300px] z-[9999] transition-all duration-200 fixed  ${
-            showShidebar ? "-left-[300px]" : "left-0"
-          } top-0 overflow-y-auto bg-white h-screen py-6 px-8`}
+          className={`w-[300px] z-[9999] transition-all duration-200 fixed  ${showShidebar ? "-left-[300px]" : "left-0"
+            } top-0 overflow-y-auto bg-white h-screen py-6 px-8`}
         >
           <div className="flex justify-start flex-col gap-6">
             <Link to="/">
@@ -274,9 +268,8 @@ const Headers = () => {
               <li>
                 <Link
                   to={"/"}
-                  className={`py-2 block ${
-                    pathname === "/" ? "text-[#7fad39]" : "text-slate-600"
-                  }`}
+                  className={`py-2 block ${pathname === "/" ? "text-[#7fad39]" : "text-slate-600"
+                    }`}
                 >
                   Home
                 </Link>
@@ -284,38 +277,34 @@ const Headers = () => {
               <li>
                 <Link
                   to={"/shops"}
-                  className={`py-2 block ${
-                    pathname === "/shops" ? "text-[#7fad39]" : "text-slate-600"
-                  }`}
+                  className={`py-2 block ${pathname === "/shops" ? "text-[#7fad39]" : "text-slate-600"
+                    }`}
                 >
                   Shop
                 </Link>
               </li>
               <li>
                 <Link
-                  className={`py-2 block ${
-                    pathname === "/blog" ? "text-[#7fad39]" : "text-slate-600"
-                  }`}
+                  className={`py-2 block ${pathname === "/blog" ? "text-[#7fad39]" : "text-slate-600"
+                    }`}
                 >
                   Blog
                 </Link>
               </li>
               <li>
                 <Link
-                  className={`py-2 block ${
-                    pathname === "/about" ? "text-[#7fad39]" : "text-slate-600"
-                  }`}
+                  className={`py-2 block ${pathname === "/about" ? "text-[#7fad39]" : "text-slate-600"
+                    }`}
                 >
                   About
                 </Link>
               </li>
               <li>
                 <Link
-                  className={`py-2 block ${
-                    pathname === "/contact"
+                  className={`py-2 block ${pathname === "/contact"
                       ? "text-[#7fad39]"
                       : "text-slate-600"
-                  }`}
+                    }`}
                 >
                   Contact
                 </Link>
@@ -361,9 +350,8 @@ const Headers = () => {
                 </span>
               </div>
               <div
-                className={`${
-                  categoryShow ? "h-0" : "h-[400px]"
-                } overflow-hidden transition-all md-lg:relative duration-500 absolute z-[99999] bg-white w-full border-x`}
+                className={`${categoryShow ? "h-0" : "h-[400px]"
+                  } overflow-hidden transition-all md-lg:relative duration-500 absolute z-[99999] bg-white w-full border-x`}
               >
                 <ul className="py-2 text-slate-600 font-medium h-full overflow-auto">
                   {categorys.map((c, i) => {

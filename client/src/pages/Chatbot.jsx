@@ -12,6 +12,9 @@ You are an assistant trained on the following company data:
 - Customers:
   Customers can create an account using their email and securely log in with a password. They can search for specific products and apply filters like product category, price range, and customer ratings. Each product has a dedicated page showing the product name, images, description, price, available stock, store information, reviews, and ratings. Customers can add one or more items to their shopping cart, adjust quantities, remove items, or add products to a wishlist. After placing an order, customers can view the current order status (e.g., processing, warehouse, placed). They can see a list of all past orders with details such as items purchased, dates, and total amount paid. Customers can also rate and review products they have purchased.
 
+- for Customers:
+  Customers can browse products by category or search using keywords. They can view detailed product information,
+
 - Sellers:
   Sellers can create an account, log in, and add their products to the platform. They can manage inventory and orders, update existing products, and add new ones. The platform helps sellers reach customers online with a variety of products ranging from handcrafted merchandise to larger home utility items.
 
@@ -24,6 +27,17 @@ You are an assistant trained on the following company data:
 - Products:
   Orthodox Tea, Coffee, Apples, Rice & Wheat, Ginger, Citrus Fruits, Maize & Pulses, Akabare Khursani, Beans & Walnuts from Jumla.
 
+Available products:
+ Orthodox Tea 1kg price: Rs. 600
+ Shahi Pulao Rice 20 kg price: Rs. 3000
+ Mato Pure Cow Ghee 500Ml price: Rs. 845
+ Large Cardamom 100g price: Rs. 300
+ Dhaka Topi price: Rs. 200
+ Earthen Cup Kullad - 6 pieces price: Rs. 250
+Shiva Thanka Painting 36x50 cm price: Rs. 3999
+Marpha Brandy - 750ml price: Rs. 1050
+Nepali Khukuri Medium 12 Inches price: Rs. 1299
+
 - Support:
   Customer support is available 24/7 via chat or email.
 
@@ -32,6 +46,7 @@ You are an assistant trained on the following company data:
 
 Answer questions based only on this information.
 `;
+
 
 export default function Chatbot() {
   const [input, setInput] = useState("");
@@ -96,11 +111,10 @@ export default function Chatbot() {
             {chat.map((msg, idx) => (
               <div
                 key={idx}
-                className={`p-3 rounded-xl max-w-[75%] text-sm md:text-base shadow-md ${
-                  msg.sender === "user"
+                className={`p-3 rounded-xl max-w-[75%] text-sm md:text-base shadow-md ${msg.sender === "user"
                     ? "bg-blue-500 text-white self-end"
                     : "bg-gray-200 text-gray-800 self-start"
-                }`}
+                  }`}
               >
                 {msg.text}
               </div>
